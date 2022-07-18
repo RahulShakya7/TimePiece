@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    background-color: aqua;
+}
+
+br {
+    background-color: aqua  ;
+}
+.container {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 239, 239);
+}
+
+.container nav-right {
+    float: right;
+}
+
+.container .row .col nav-right button {
+    background-color: azure;
+} 
+
