@@ -3,7 +3,72 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
+<!--  products --><section id = "product" class = "py-5">
+        <div class = "container">
+            <div class="cats">
+                <button class="special">Special</button>
+                <button class="best">Best Sellers</button>
+            </div>
+            <div class = "product-list row g-0">
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "product-img position-relative overflow-hidden">
+                        <img src = "{% static 'images/watches/TAG_BRD8651_WAZ1110.BA0875_Front_018-clipped.avif' %}" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">TAG HEUERFormula 1</p>
+                        <span class = "fw-bold d-block">Rs. 7900</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>
 
-<div><h1>Category Page</h1></div>
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "product-img position-relative overflow-hidden">
+                        <img src = "{% static 'images/watches/SRPH80_1.avif' %}" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">SEIKOSRPH80 Seiko 5 Sports</p>
+                        <span class = "fw-bold d-block">Rs. 4600</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "product-img position-relative overflow-hidden">
+                        <img src = "{% static 'images/watches/H64455523_Web-001.avif' %}" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">HAMILTONKhaki Field King</p>
+                        <span class = "fw-bold d-block">Rs. 8000</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>  
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "product-img position-relative overflow-hidden">
+                        <img src = "{% static 'images/watches/sa01_so29k100_cmyk431605_INT.avif' %}" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">SWATCHClearly</p>
+                        <span class = "fw-bold d-block">Rs. 8000</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+    <!-- end of  products -->
 
 {% endblock content%}

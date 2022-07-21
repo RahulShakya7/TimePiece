@@ -9,9 +9,9 @@ def category(request):
     context = {}
     return render(request, 'shop/category.html', context)
 
-def navbar(request):
+def login(request):
     context = {}
-    return render(request, 'shop/navbar.html', context)
+    return render(request, 'shop/InandOut.html', context)
 
 def cart(request):
     context = {}

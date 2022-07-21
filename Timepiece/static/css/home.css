@@ -1,26 +1,64 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
+
+/* Main body */
+/* header */
+#header{
+    background-color: black;
+    background: url(../images/home/watchtp.jpg) top/cover no-repeat;
 }
 
-.body {
-    margin: 0;
-    padding: 0;
+/* title */
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--black);
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
-.home {
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    top: 50px;
+/* collection */
+.active-filter-btn{
+    background-color: var(--black)!important;
+    color: rgb(0, 0, 0)!important;
+    border-color: var(--black)!important;
+}
+.filter-button-group .btn:hover{
+    color: rgb(0, 136, 255)!important;
+}
+.collection-img span{
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
 }
 
-.container .main img{
-    max-width: 40%;
-    /* height: 100vh; */
-    margin-top: 50px;
+/* special */
+.special-img span{
+    top: 20px;
+    right: 20px;
+}
+.special-list .btn{
+    padding: 8px 20px!important;
+}
+.special-img img{
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.special-img:hover img{
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+/* media queries */
+@media(min-width: 992px){
+    .nav-item{
+        border-bottom: none;
+    }
 }
