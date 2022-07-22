@@ -6,7 +6,31 @@
 body {
     margin: 0;
 }
+/* NavBar */
+.navbar {
+    margin: 10px 0 10px 0;
+    padding: 10px; 
+    height: 55px !important;
+    font-size: 18px;
+    z-index: 9;
+    position: absolute;
+}
+.navbar-expand-lg .navbar-collapse {
+    align-items: center;
+    text-align: center  ;
+    }
+.navbar .navbar-nav {
+    text-align: center;
+}
+.navbar .navbar-brand {
+    font-size: 26px;
+}
 
+@media(min-width:992px){
+    .navbar-expand-lg .navbar-collapse {
+        width: 100%;
+    }
+}
 /* Scrollbar */
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
@@ -41,33 +65,5 @@ body {
     background: 0 0;
 }
 
-/* NavBar */
-.navbar {
-    margin: 10px 0 10px 0;
-    padding: 0;
-    height: 50px !important;
-    font-size: 18px;
-    background-color: #fff;
-    z-index: 9;
-    position: absolute;
-}
-.navbar-expand-lg .navbar-collapse {
-    align-items: center;
-    text-align: center  ;
-    }
-/* .navbar .navbar-expand-lg {
-    background-color: azure;
-} */
-.navbar .navbar-nav {
-    text-align: center;
-}
-.navbar .navbar-brand {
-    font-size: 26px;
-}
 
-@media(min-width:992px){
-    .navbar-expand-lg .navbar-collapse {
-        width: 100%;
-    }
-}
 
