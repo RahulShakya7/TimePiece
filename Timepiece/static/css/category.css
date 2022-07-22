@@ -2,20 +2,21 @@
     margin: 0;
     font-family: 'Raleway', sans-serif;
 }
+h1 {
+    margin: auto auto;
+}
 .cats{
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-bottom: 40px;
 }
-.cats button {
+.container .cats button {
     background-color: #fff;
     color: rgb(0, 0, 0);
     padding: 10px 200px;
-    border-radius: 25px;
-    border: 1px solid rgb(0, 0, 0);
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
 }
 .cats button:hover{
     color: rgb(0, 110, 255) !important;
