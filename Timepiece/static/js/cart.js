@@ -10,7 +10,11 @@ for (i = 0; i < updateBtns.length; i++){
         if (user == 'AnonymousUser'){
             console.log('User not indentified')
         } else {
-            console.log('User is identified: Sending data..')
+            updateUserOrder(productId, action)
         }
     })
+}
+
+function updateUserOrder(productId, action){
+    console.log('User is authorized: Sending data...')
 }
