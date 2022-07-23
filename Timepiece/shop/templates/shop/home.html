@@ -34,113 +34,32 @@
     <!-- collection -->
     <section id = "collection" class = "py-5">
         <div class = "container">
-            <div class = "title text-center">
+            <div class = "title text-center py-5">
                 <h2 class = "position-relative d-inline-block">Our Collection</h2>
             </div>
             <div class = "row g-0">
-                <div class = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                <!-- <div class = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
                     <button type = "button" class = "btn m-2 text-dark active-filter-btn" data-filter = "*">All</button>
                     <button type = "button" class = "btn m-2 text-dark" data-filter = ".best">Best Sellers</button>
                     <button type = "button" class = "btn m-2 text-dark" data-filter = ".feat">Specials</button>
-                </div>
-
+                </div> -->
+                
                 <div class = "collection-list mt-4 row gx-0 gy-3">
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                    {% for product in products %}
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
                         <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/Bremont_39931_5502-BK-R-S_Front_Crown_107-clipped_JG.avif' %}" class = "w-100">
+                            <img src = "{{ product.imageURL }}" alt="" class = "w-100">
                             <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
                         </div>
                         <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">Supermarine S502</p>
-                            <span class = "fw-bold d-block">Rs. 8000</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
+                            <p class = "text-capitalize mt-3 mb-1">{{ product.name }}</p>
+                            <span class = "fw-bold d-block">Rs. {{ product.price|floatformat:2 }}</span>
+                            <button data-product="{{product.id}}" data-action="add" class = "btn btn-prima ry mt-3 add-btn update-cart">Add to Cart</button>
                         </div>
                     </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
-                        <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/GA-B2100-3A_JF.avif' %}" class = "w-100">
-                            <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">G-SHOCKGAB2100-3A In Green</p>
-                            <span class = "fw-bold d-block">Rs. 3000</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
-                        <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/Longines18-Natural.avif' %}" class = "w-100">
-                            <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">OMEGAConstellation Chronometer</p>
-                            <span class = "fw-bold d-block">Rs. 15000</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
-                        <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/Longines18-Natural.avif' %}" class = "w-100">
-                            <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">LONGINESHeritage Classic 'Sector'</p>
-                            <span class = "fw-bold d-block">Rs. 4500</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
-                        <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/053606WW00.avif' %}" class = "w-100">
-                            <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">ERMÈSSlim D'Hermès Squelette</p>
-                            <span class = "fw-bold d-block">Rs. 90000</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
-                        <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/GA-B2100-2A_JF.avif' %}" class = "w-100">
-                            <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">G-SHOCKGAB2100-2A In Blue</p>
-                            <span class = "fw-bold d-block">Rs. 3000</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
-                        <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/Rolex-Submariner-116613-10-10-ROL-82DYGP-a8ea7c23976b_a65adff4-30cd-469c-8f3c-812617e59468_2048x2048.avif' %}" class = "w-100">
-                            <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">Rolex Submariner 116613</p>
-                            <span class = "fw-bold d-block">Rs. 175000</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
-                        <div class = "collection-img position-relative">
-                            <img src = "{% static 'images/watches/TW2U87900.avif' %}" class = "w-100">
-                            <!--<span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>-->
-                        </div>
-                        <div class = "text-center">
-                            <p class = "text-capitalize mt-3 mb-1">TIMEXQ Timex 1978 </p>
-                            <span class = "fw-bold d-block">Rs. 5500</span>
-                            <a href = "#" class = "btn btn-primary mt-3">Add to Cart</a>
-                        </div>
-                    </div>
+                {% endfor %}
                 </div>
+                
             </div>
         </div>
     </section>
@@ -154,7 +73,7 @@
             </div>
 
             <div class = "product-list row g-0">
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                <div class = "col-md-6 col-lg-4 col-xl-3 ">
                     <div class = "product-img position-relative overflow-hidden">
                         <img src = "{% static 'images/watches/TAG_BRD8651_WAZ1110.BA0875_Front_018-clipped.avif' %}" class = "w-100">
                         <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
@@ -216,8 +135,9 @@
     
   <!-- Main Body End -->
 
-  <script href="index.js"></script>
-  <script href="jquery-3.6.0.js"></script>
+  <!-- <script href="index.js"></script>
+  <script href="jquery-3.6.0.js"></script> -->
+  <script type="text/javascript"> var user = '{{ request.user }}' </script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
