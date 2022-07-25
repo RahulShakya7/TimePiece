@@ -8,6 +8,7 @@ class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
+    password = models.CharField(max_length=20, null=True)
 
     def __str__(self):
         return self.name
@@ -76,6 +77,7 @@ class ShippingAddress(models.Model):
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, blank= True, null=True)
     city = models.CharField(max_length=200, null=True)
     address = models.CharField(max_length=200, null=True)
+    zipcode = models.CharField(max_length=40, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

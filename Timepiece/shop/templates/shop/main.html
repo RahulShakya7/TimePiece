@@ -15,7 +15,7 @@
     <script type="text/javascript"> 
         var user = '{{ request.user }}'
       
-        function getCookie(name) {
+        function getToken(name) {
                 let cookieValue = null;
                 if (document.cookie && document.cookie !== '') {
                     const cookies = document.cookie.split(';');
@@ -30,7 +30,7 @@
             }
             return cookieValue;
         }
-        const csrftoken = getCookie('csrftoken');
+        const csrftoken = getToken('csrftoken');
     </script>
 </head>
 <body>
@@ -38,10 +38,10 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <!-- Navbar left side -->
-    <div class="collapse navbar-collapse order-lg-1 order-3 bg-white nav-menu">
+    <div class="collapse navbar-collapse order-lg-1 order-3 me-4 bg-white nav-menu">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/category">Category <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Category</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Brands</a>
@@ -63,11 +63,14 @@
     <div class="collapse navbar-collapse order-lg-1 order-3 bg-white nav-menu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item dropdown">
+          <a href="">{{ customer.name }}</a>
           <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="{% static 'images/navicons/user.svg' %}" alt="">
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/login">Log In</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/register">Sign Up</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Log Out</a>
           </div>
@@ -75,7 +78,6 @@
         
         <li class="nav-item">
           <a class="nav-link" href="/cart"><img src="{% static 'images/navicons/cart.svg' %}" alt=""></a>
-          <!-- <p id="cart-total">0</p> -->
         </li>
         
         <li class="nav-item active">
