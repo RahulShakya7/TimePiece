@@ -25,7 +25,7 @@
             <div class = "text-center carousel-item active">
                 <h2 class = "text-capitalize text-white">Most Fashionable</h2>
                 <h1 class = "text-uppercase py-2 fw-bold text-white">new arrivals</h1>
-                <a href = "#" class = "btn mt-3 text-uppercase">shop now</a>
+                <a href = "#collection" class = "btn mt-3 text-uppercase">shop now</a>
             </div>
         </div>
     </header>
@@ -63,26 +63,6 @@
 
   <!-- <script href="index.js"></script>
   <script href="jquery-3.6.0.js"></script> -->
-  <script type="text/javascript"> 
-        var user = '{{ request.user }}'
-        
-        function getToken(name) {
-                let cookieValue = null;
-                if (document.cookie && document.cookie !== '') {
-                    const cookies = document.cookie.split(';');
-                    for (let i = 0; i < cookies.length; i++) {
-                        const cookie = cookies[i].trim();
-                        // Does this cookie string begin with the name we want?
-                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
-                    }
-                }
-            }
-            return cookieValue;
-        }
-        const csrftoken = getToken('csrftoken');
-  </script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
